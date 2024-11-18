@@ -12,6 +12,10 @@ export default defineConfig({
       logo: {
         src: "./src/assets/alg-logo.png",
       },
+      components: {
+        // Relative path to the custom component.
+        Head: "./src/components/Head.astro",
+      },
       social: {
         github: "https://github.com/arch-linux-gui",
       },
