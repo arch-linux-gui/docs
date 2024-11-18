@@ -1,18 +1,32 @@
 ---
-import type { Props } from '@astrojs/starlight/props'
-import Default from '@astrojs/starlight/components/Head.astro'
+import Default from "@astrojs/starlight/components/Head.astro";
+import type { Props } from "@astrojs/starlight/props";
 
 // Get the URL of the generated image for the current page using its
 // ID and replace the file extension with `.png`.
 const ogImageUrl = new URL(
-  `/og/${Astro.props.id.replace(/\.\w+$/, '.png')}`,
-  Astro.site,
-)
+  `/og/${Astro.props.id.replace(/\.\w+$/, ".png")}`,
+  Astro.site
+);
 ---
 
 <!-- Render the default <Head/> component. -->
 <Default {...Astro.props}><slot /></Default>
 
 <!-- Render the <meta/> tags for the Open Graph images. -->
+<title>Arka Linux GUI</title>
+<meta name="description" content="Arka Linux GUI" />
+<meta property="og:url" content="https://docs.arkalinuxgui.org/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Arka Linux GUI" />
+<meta property="og:description" content="Arka Linux GUI" />
+<meta property="og:image" content="https://opengraph.b-cdn.net/production/images/61838552-8b98-4e3e-b044-8da926520d81.png?token=_LMALZkKpwdSJpvHhJSBfRF1HgKcKQzUKv5PiHsbIdY&height=597&width=1200&expires=33267912157">
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:domain" content="docs.arkalinuxgui.org" />
+<meta property="twitter:url" content="https://arkalinuxgui.org/" />
+<meta name="twitter:title" content="Arka Linux GUI" />
+<meta name="twitter:description" content="Arka Linux GUI" />
+<meta name="twitter:image" content="https://opengraph.b-cdn.net/production/images/61838552-8b98-4e3e-b044-8da926520d81.png?token=_LMALZkKpwdSJpvHhJSBfRF1HgKcKQzUKv5PiHsbIdY&height=597&width=1200&expires=33267912157">
 <meta property="og:image" content={ogImageUrl} />
 <meta name="twitter:image" content={ogImageUrl} />
