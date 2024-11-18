@@ -10,7 +10,7 @@ export default defineConfig({
     starlight({
       title: "Arka Linux GUI",
       logo: {
-        src: "./public/alg-logo.png",
+        src: "./src/assets/alg-logo.png",
       },
       social: {
         github: "https://github.com/arch-linux-gui",
