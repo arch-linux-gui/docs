@@ -1,0 +1,29 @@
+/* Dark mode colors */
+:root {
+  --sl-color-accent-low: #e0ce7d; /* Accent low */
+  --sl-color-accent: #f8930f; /* Accent primary */
+  --sl-color-accent-high: #f1571c; /* Accent high */
+  --sl-color-white: #ffffff;
+  --sl-color-gray-1: #f9f5f5; /* Lightest gray */
+  --sl-color-gray-2: #e5dedc;
+  --sl-color-gray-3: #bfb5b3;
+  --sl-color-gray-4: #948a87;
+  --sl-color-gray-5: #655a58;
+  --sl-color-gray-6: #3c312e; /* Darkest gray */
+  --sl-color-black: #201a18;
+}
+
+/* Light mode colors */
+:root[data-theme="light"] {
+  --sl-color-accent-low: #fcd006; /* Accent low */
+  --sl-color-accent: #f8930f; /* Accent primary */
+  --sl-color-accent-high: #f1571c; /* Accent high */
+  --sl-color-white: #201a18; /* Dark mode black becomes light mode white */
+  --sl-color-gray-1: #3c312e; /* Reverse grays for light mode */
+  --sl-color-gray-2: #655a58;
+  --sl-color-gray-3: #948a87;
+  --sl-color-gray-4: #bfb5b3;
+  --sl-color-gray-5: #e5dedc;
+  --sl-color-gray-6: #f9f5f5; /* Lightest gray */
+  --sl-color-black: #ffffff; /* Light mode black */
+}
