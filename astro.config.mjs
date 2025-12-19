@@ -27,9 +27,13 @@ export default defineConfig({
         // Relative path to the custom component.
         Head: "./src/components/Head.astro",
       },
-      social: {
-        github: "https://github.com/arch-linux-gui",
-      },
+      social: [
+        {
+          icon: "github",
+          label: "GitHub",
+          href: "https://github.com/arch-linux-gui",
+        },
+      ],
       sidebar: [
         {
           label: "Guides",
