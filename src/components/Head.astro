@@ -1,13 +1,19 @@
 ---
 import Default from "@astrojs/starlight/components/Head.astro";
-import type { Props } from "@astrojs/starlight/props";
+// Import astro props types directly instead of using deprecated starlight props
+interface Props {
+  id: string;
+  slug: string;
+  // Add other props as needed
+}
 
 // Get the URL of the generated image for the current page using its
 // ID and replace the file extension with `.png`.
-const ogImageUrl = new URL(
+// Add safety check for id prop
+const ogImageUrl = Astro.props.id ? new URL(
   `/og/${Astro.props.id.replace(/\.\w+$/, ".png")}`,
   Astro.site
-);
+) : null;
 ---
 
 <!-- Render the default <Head/> component. -->
